@@ -1,0 +1,355 @@
+import 'package:school_app/models/card_home_info.dart';
+import 'package:school_app/models/message_card_info.dart';
+import 'package:school_app/models/comment_info.dart';
+import 'package:school_app/models/comment_reply_info.dart';
+import 'package:school_app/models/quiz_questions.dart';
+
+List<CardHomeInfo> dummyCardHomeData = [
+  CardHomeInfo(
+    title: 'Sample Title 1',
+    content: 'Sample Content for Card 1',
+    author: 'John Doe',
+    dateTime: DateTime.now(),
+    cardType: 'إعلان',
+    isPinned: false,
+    isRead: false,
+    images: [],
+    files: [],
+  ),
+  CardHomeInfo(
+    title: 'Sample Title 2',
+    content: 'Sample Content for Card 2',
+    author: 'Jane Smith',
+    dateTime: DateTime.now(),
+    cardType: 'حدث',
+    isPinned: false,
+    isRead: false,
+    images: [],
+    files: [],
+  ),
+  CardHomeInfo(
+    title: 'Important Announcement',
+    content: 'There will be a meeting tomorrow at 3 PM.',
+    author: 'Admin',
+    dateTime: DateTime.now(),
+    cardType: 'إعلان',
+    isPinned: false,
+    isRead: false,
+    images: [],
+    files: [],
+  ),
+  CardHomeInfo(
+    title: 'Homework Reminder',
+    content: 'Don\'t forget to complete the Math homework.',
+    author: 'Math Teacher',
+    dateTime: DateTime.now(),
+    cardType: 'ألبوم',
+    isPinned: false,
+    isRead: false,
+    images: [
+            'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+    ],
+    files: [],
+  ),
+  CardHomeInfo(
+    title: 'Sports Day Event',
+    content: 'Join us for the annual sports day on October 5th.',
+    author: 'Sports Coordinator',
+    dateTime: DateTime.now(),
+    cardType: 'حدث',
+    isPinned: false,
+    isRead: false,
+    images: [
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+    ],
+    files: [],
+  ),
+  CardHomeInfo(
+    title: 'Parent-Teacher Meetings',
+    content: 'Parent-teacher meetings will be held next week.',
+    author: 'Principal',
+    dateTime: DateTime.now(),
+    cardType: 'إعلان',
+    isPinned: false,
+    isRead: false,
+    images: [
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+    ],
+    files: [],
+  ),
+  CardHomeInfo(
+    title: 'Library Book Return',
+    content: 'Please return all library books by October 1st.',
+    author: 'Librarian',
+    dateTime: DateTime.now(),
+    cardType: 'إعلان',
+    isPinned: false,
+    isRead: false,
+    images: [
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+    ],
+    files: [],
+  ),
+  CardHomeInfo(
+    title: 'Science Fair Participation',
+    content: 'Sign up for the upcoming science fair.',
+    author: 'Science Department',
+    dateTime: DateTime.now(),
+    cardType: 'ألبوم',
+    isPinned: false,
+    isRead: false,
+    images: [
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+            'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+            'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+      'https://www.thegardnerschool.com/wp-content/uploads/2020/01/shutterstock_545206177.jpg',
+    ],
+    files: [],
+  ),
+];
+
+List<CardMessagesInfo> dummyCardMessagesData = [
+  CardMessagesInfo(
+    content: 'Sample Content for Card 1',
+    author: 'John Doe',
+    dateTime: '10:30 AM',
+    cardType: 'chat',
+  ),
+  CardMessagesInfo(
+    content: 'Sample Content for Card 2',
+    author: 'Jane Smith',
+    dateTime: '11:45 AM',
+    cardType: 'group',
+  ),
+  CardMessagesInfo(
+    content: 'Sample Content for Card 2',
+    author: 'Jane Smith',
+    dateTime: '11:45 AM',
+    cardType: 'Type B',
+  ),
+  CardMessagesInfo(
+    content: 'Sample Content for Card 2',
+    author: 'Jane Smith',
+    dateTime: '11:45 AM',
+    cardType: 'Type B',
+  ),
+  CardMessagesInfo(
+    content: 'Sample Content for Card 2',
+    author: 'Jane Smith',
+    dateTime: '11:45 AM',
+    cardType: 'Type B',
+  ),
+];
+
+List<CommentInfo> dummyComments = [
+  CommentInfo(
+    content: 'Great post!',
+    author: 'John Doe',
+    dateTime: DateTime.now().subtract(const Duration(hours: 2)),
+    authorImageUrl: null,
+    replies: [
+      CommentReplyInfo(
+        content: 'Thanks!',
+        author: 'Jane Smith',
+        dateTime: DateTime.now().subtract(const Duration(minutes: 30)),
+        authorImageUrl: null,
+      ),
+      CommentReplyInfo(
+        content: 'I have a question.',
+        author: 'Bob Johnson',
+        dateTime: DateTime.now().subtract(const Duration(minutes: 15)),
+        authorImageUrl: null,
+      ),
+    ],
+  ),
+  CommentInfo(
+    content: 'Awesome work!',
+    author: 'Alice Williams',
+    dateTime: DateTime.now().subtract(const Duration(hours: 1)),
+    authorImageUrl: null,
+    replies: [
+      CommentReplyInfo(
+        content: 'Thank you!',
+        author: 'Charlie Brown',
+        dateTime: DateTime.now().subtract(const Duration(minutes: 45)),
+        authorImageUrl: null,
+      ),
+    ],
+  ),
+  CommentInfo(
+    content: 'Awesome work!',
+    author: 'Alice Williams',
+    dateTime: DateTime.now().subtract(const Duration(hours: 1)),
+    authorImageUrl: null,
+    replies: null,
+  ),
+  CommentInfo(
+    content: 'Awesome work!',
+    author: 'Alice Williams',
+    dateTime: DateTime.now().subtract(const Duration(hours: 1)),
+    authorImageUrl: null,
+    replies: null,
+  ),
+  CommentInfo(
+    content: 'Awesome work!',
+    author: 'Alice Williams',
+    dateTime: DateTime.now().subtract(const Duration(hours: 1)),
+    authorImageUrl: null,
+    replies: null,
+  ),
+  CommentInfo(
+    content: 'Awesome work!',
+    author: 'Alice Williams',
+    dateTime: DateTime.now().subtract(const Duration(hours: 1)),
+    authorImageUrl: null,
+    replies: null,
+  ),
+  CommentInfo(
+    content: 'Awesome work!',
+    author: 'Alice Williams',
+    dateTime: DateTime.now().subtract(const Duration(hours: 1)),
+    authorImageUrl: null,
+    replies: null,
+  ),
+  CommentInfo(
+    content: 'Awesome work!',
+    author: 'Alice Williams',
+    dateTime: DateTime.now().subtract(const Duration(hours: 1)),
+    authorImageUrl: null,
+    replies: null,
+  ),
+  CommentInfo(
+    content: 'Awesome work!',
+    author: 'Alice Williams',
+    dateTime: DateTime.now().subtract(const Duration(hours: 1)),
+    authorImageUrl: null,
+    replies: null,
+  ),
+  CommentInfo(
+    content: 'Awesome work!',
+    author: 'Alice Williams',
+    dateTime: DateTime.now().subtract(const Duration(hours: 1)),
+    authorImageUrl: null,
+    replies: null,
+  ),
+  CommentInfo(
+    content: 'Awesome work!',
+    author: 'Alice Williams',
+    dateTime: DateTime.now().subtract(const Duration(hours: 1)),
+    authorImageUrl: null,
+    replies: null,
+  ),
+  CommentInfo(
+    content: 'Awesome work!',
+    author: 'Alice Williams',
+    dateTime: DateTime.now().subtract(const Duration(hours: 1)),
+    authorImageUrl: null,
+    replies: null,
+  ),
+  CommentInfo(
+    content: 'Awesome work!',
+    author: 'Alice Williams',
+    dateTime: DateTime.now().subtract(const Duration(hours: 1)),
+    authorImageUrl: null,
+    replies: null,
+  ),
+  CommentInfo(
+    content: 'Awesome work!',
+    author: 'Alice Williams',
+    dateTime: DateTime.now().subtract(const Duration(hours: 1)),
+    authorImageUrl: null,
+    replies: null,
+  ),
+  CommentInfo(
+    content: 'Awesome work!',
+    author: 'Alice Williams',
+    dateTime: DateTime.now().subtract(const Duration(hours: 1)),
+    authorImageUrl: null,
+    replies: null,
+  ),
+  CommentInfo(
+    content: 'Awesome work!',
+    author: 'Alice Williams',
+    dateTime: DateTime.now().subtract(const Duration(hours: 1)),
+    authorImageUrl: null,
+    replies: null,
+  ),
+  // Add more dummy comments as needed
+];
+
+const questions = [
+  QuizQuestion(
+    'What are the main building blocks of Flutter UIs?',
+    [
+      'Widgets',
+      'Components',
+      'Blocks',
+      'Functions',
+    ],
+  ),
+  QuizQuestion(
+    'How are Flutter UIs built?',
+    [
+      'By combining widgets in code',
+      'By combining widgets in a visual editor',
+      'By defining widgets in config files',
+      'By using XCode for iOS and Android Studio for Android',
+    ],
+  ),
+  QuizQuestion(
+    'What\'s the purpose of a StatefulWidget?',
+    [
+      'Update UI as data changes',
+      'Update data as UI changes',
+      'Ignore data changes',
+      'Render UI that does not depend on data',
+    ],
+  ),
+  QuizQuestion(
+    'Which widget should you try to use more often: StatelessWidget or StatefulWidget?',
+    [
+      'StatelessWidget',
+      'StatefulWidget',
+      'Both are equally good',
+      'None of the above',
+    ],
+  ),
+  QuizQuestion(
+    'What happens if you change data in a StatelessWidget?',
+    [
+      'The UI is not updated',
+      'The UI is updated',
+      'The closest StatefulWidget is updated',
+      'Any nested StatefulWidgets are updated',
+    ],
+  ),
+  QuizQuestion(
+    'How should you update data inside of StatefulWidgets?',
+    [
+      'By calling setState()',
+      'By calling updateData()',
+      'By calling updateUI()',
+      'By calling updateState()',
+    ],
+  )
+];

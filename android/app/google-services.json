@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "766630085430",
+    "project_id": "schollery-bb4df",
+    "storage_bucket": "schollery-bb4df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766630085430:android:afc7d21b05606b2b2a2997",
+        "android_client_info": {
+          "package_name": "com.example.school_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtIocXKGIqGeC5oWWF7JClHPxJG7L0RbA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
